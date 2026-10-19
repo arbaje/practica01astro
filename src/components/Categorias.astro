@@ -1,0 +1,40 @@
+---
+---
+<main>
+	<a class="mujer" href="#">
+		<p>MUJER</p>
+	</a>
+
+	<a class="hombre" href="#">
+		<p>HOMBRE</p>
+	</a>
+</main>
+
+<style>
+	main {
+		display: flex;
+		height: 100vh;
+		font-family: Arial, sans-serif;
+	}
+	a {
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-size: cover;
+		background-position: top;
+		text-decoration: none;
+	}
+	.mujer {
+		background-image: url(/mujer.png);
+	}
+	.hombre {
+		background-image: url(/hombre.png);
+	}
+	p {
+		color: white;
+		font-size: 70px;
+		font-weight: bold;
+		transform: rotate(-90deg);
+	}
+</style>
