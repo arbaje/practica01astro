@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout>
+	<header>
+		<nav>
+			<a href="/tienda" class="activo">HOME</a>
+			<a href="/tienda">SHOP</a>
+		</nav>
+		<div class="usuario">
+			<span>User_name</span>
+			<div class="avatar"></div>
+		</div>
+
+		<div class="textos">
+			<h1>REBAJAS</h1>
+			<h2>MIRTO MUJER</h2>
+			<p>-10% -20% -30% -40% -50%</p>
+		</div>
+	</header>
+
+	<section class="buscador">
+		<img class="logo" src="/logo_marca.png" alt="logo" />
+
+		<div class="caja">
+			<img class="lupa" src="/lupa.png" alt="buscar" />
+			<input type="text" placeholder="BUSCAR" />
+		</div>
+	</section>
+
+	<section class="productos">
+		<Card titulo="Abrigo largo pliegue espalda" precio="59,99 €" imagen="/imagen_articulo.png" />
+		<Card titulo="Abrigo largo pliegue pecho" precio="59,99 €" imagen="/imagen_articulo_02.png" />
+		<Card titulo="Abrigo acolchado extralargo" precio="49,99 €" imagen="/imagen_articulo.png" />
+		<Card titulo="Gabardina vaquera" precio="69,99 €" imagen="/imagen_articulo_02.png" />
+		<Card titulo="Abrigo paño" precio="29,99 €" imagen="/imagen_articulo.png" />
+		<Card titulo="Abrigo acolchado capucha" precio="49,99 €" imagen="/imagen_articulo_02.png" />
+		<Card titulo="Abrigo borreguito" precio="19,99 €" imagen="/imagen_articulo.png" />
+		<Card titulo="Jeans skinny rotos" precio="9,99 €" imagen="/imagen_articulo_02.png" />
+	</section>
+</Layout>
+
+<style>
+	header {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		background-image: url(/iamgen_cabecera.png);
+		background-size: cover;
+		background-position: center top;
+		color: white;
+		font-family: Arial, sans-serif;
+	}
+	nav {
+		position: absolute;
+		top: 15px;
+		left: 20px;
+		display: flex;
+		gap: 20px;
+	}
+	nav a {
+		color: #333;
+		text-decoration: none;
+		font-size: 12px;
+	}
+	.activo {
+		border-bottom: 1px solid #333;
+	}
+	.usuario {
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 12px;
+		color: #333;
+	}
+	.avatar {
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		background-color: orange;
+	}
+	.textos {
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	h1 {
+		margin: 0;
+		font-size: 50px;
+	}
+	h2 {
+		margin: 0;
+		font-size: 18px;
+		font-weight: normal;
+	}
+	.textos p {
+		margin: 10px 0 0 0;
+		font-size: 22px;
+	}
+
+	.buscador {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		width: 850px;
+		height: 90px;
+		margin: 20px auto;
+	}
+	.logo {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 130px;
+	}
+	.caja {
+		display: flex;
+		align-items: center;
+		width: 200px;
+		padding: 5px;
+		border: 1px solid gray;
+	}
+	.lupa {
+		width: 15px;
+		height: 15px;
+		margin-right: 8px;
+	}
+	input {
+		width: 100%;
+		border: none;
+		outline: none;
+	}
+
+	.productos {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 40px 10px;
+		width: 830px;
+		margin: 0 auto;
+		padding-bottom: 40px;
+	}
+</style>

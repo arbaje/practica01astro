@@ -1,0 +1,33 @@
+---
+const { titulo, precio, imagen } = Astro.props;
+---
+
+<article>
+	<img src={imagen} alt={titulo} />
+	<p class="titulo">{titulo}</p>
+	<p class="precio">{precio}</p>
+</article>
+
+<style>
+	article {
+		width: 200px;
+		text-align: center;
+		font-family: Arial, sans-serif;
+	}
+	img {
+		width: 100%;
+		height: 290px;
+		object-fit: cover;
+	}
+	p {
+		margin: 6px 0 0 0;
+	}
+	.titulo {
+		font-size: 11px;
+		color: gray;
+	}
+	.precio {
+		font-size: 12px;
+		font-weight: bold;
+	}
+</style>
